@@ -1,0 +1,14 @@
+{
+  "artifact_id": "framework-architecture-v1",
+  "artifact_type": "diagram",
+  "canonical_source": "asset-store",
+  "asset_provider": "git",
+  "repository": "devsinsight/ai-engineering-framework",
+  "path": "assets/architecture/ai-engineering-framework.png",
+  "filename": "ai-engineering-framework.png",
+  "media_type": "image/png",
+  "size_bytes": 1693465,
+  "sha256": "db4fb809537a8330bd7ce208c1482ef769f0242008c697994608b93a89642bda",
+  "parent_document": "AI Engineering Framework Home",
+  "status": "approved"
+}
