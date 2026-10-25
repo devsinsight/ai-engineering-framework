@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E3A5F"/>
+    </linearGradient>
+    <linearGradient id="pageL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E2E8F0"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="pageR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="220" fill="url(#bg)"/>
+  <!-- source links converging into the library -->
+  <g stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="20" stroke-linecap="round" fill="none">
+    <path d="M280 300 Q300 520 512 600"/>
+    <path d="M512 230 L512 600"/>
+    <path d="M744 300 Q724 520 512 600"/>
+  </g>
+  <!-- sources -->
+  <circle cx="280" cy="300" r="70" fill="#2DD4BF" stroke="#FFFFFF" stroke-width="16"/>
+  <circle cx="512" cy="230" r="70" fill="#FBBF24" stroke="#FFFFFF" stroke-width="16"/>
+  <circle cx="744" cy="300" r="70" fill="#A78BFA" stroke="#FFFFFF" stroke-width="16"/>
+  <!-- open book: the knowledge base -->
+  <path d="M512 610 C440 566 330 560 236 590 L236 812 C330 784 440 790 512 832 Z" fill="url(#pageL)"/>
+  <path d="M512 610 C584 566 694 560 788 590 L788 812 C694 784 584 790 512 832 Z" fill="url(#pageR)"/>
+  <g stroke="#94A3B8" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M300 650 C360 634 420 636 470 660"/>
+    <path d="M300 705 C360 689 420 691 470 715"/>
+    <path d="M300 760 C360 744 420 746 470 770"/>
+    <path d="M554 660 C604 636 664 634 724 650"/>
+    <path d="M554 715 C604 691 664 689 724 705"/>
+    <path d="M554 770 C604 746 664 744 724 760"/>
+  </g>
+  <path d="M512 610 L512 832" stroke="#1E3A5F" stroke-width="8" stroke-linecap="round"/>
+</svg>

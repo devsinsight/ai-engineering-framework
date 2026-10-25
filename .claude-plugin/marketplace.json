@@ -1,0 +1,17 @@
+{
+  "name": "devsinsight",
+  "description": "Plugins of the AI Engineering Framework (AIEF): provider-neutral, knowledge-driven software engineering.",
+  "owner": {
+    "name": "devsinsight",
+    "url": "https://github.com/devsinsight"
+  },
+  "plugins": [
+    {
+      "name": "aief",
+      "source": "./plugins/aief",
+      "description": "Guides building a governed, multi-source project knowledge base that follows the AI Engineering Framework.",
+      "category": "knowledge-management",
+      "tags": ["knowledge-base", "aief", "rag", "documentation"]
+    }
+  ]
+}
