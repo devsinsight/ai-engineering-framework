@@ -1,0 +1,5 @@
+# Local assistant and working files (not shared)
+.claude/
+.docs/
+.prompts/
+.mcp.json
