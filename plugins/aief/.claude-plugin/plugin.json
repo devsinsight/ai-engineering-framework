@@ -1,7 +1,7 @@
 {
   "name": "aief",
   "displayName": "AI Engineering Framework",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Skills for applying the AI Engineering Framework (AIEF). First skill: guide the construction of a governed, multi-source project knowledge base.",
   "author": {
     "name": "devsinsight",
@@ -11,5 +11,11 @@
   "repository": "https://github.com/devsinsight/ai-engineering-framework",
   "license": "MIT",
   "icon": "./assets/icon.png",
-  "keywords": ["knowledge-base", "aief", "rag", "knowledge-management", "documentation"]
+  "keywords": [
+    "knowledge-base",
+    "aief",
+    "rag",
+    "knowledge-management",
+    "documentation"
+  ]
 }
