@@ -1,14 +1,12 @@
 {
-  "artifact_id": "framework-architecture-v1",
+  "artifact_id": "framework-architecture",
   "artifact_type": "diagram",
-  "canonical_source": "asset-store",
-  "asset_provider": "git",
-  "repository": "devsinsight/ai-engineering-framework",
-  "path": "assets/architecture/ai-engineering-framework.png",
-  "filename": "ai-engineering-framework.png",
-  "media_type": "image/png",
-  "size_bytes": 1693465,
-  "sha256": "db4fb809537a8330bd7ce208c1482ef769f0242008c697994608b93a89642bda",
+  "title": "AI Engineering Framework Architecture",
+  "canonical_source": "visual-provider",
+  "visual_provider": "miro",
+  "canonical_url": "https://miro.com/app/board/uXjVEZjGHbY=/",
   "parent_document": "AI Engineering Framework Home",
-  "status": "approved"
+  "state": "validated",
+  "exports": [],
+  "notes": "Per ADR-005 the editable Miro board is the authority. No exported snapshot is stored yet; when one is added, list it under exports with role, path, media_type, size_bytes and sha256."
 }
