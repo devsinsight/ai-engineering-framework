@@ -1,6 +1,6 @@
 # AI tooling: MCP servers, skills and agents
 
-Source: AI Tooling for the Knowledge Base - MCPs, Skills and Agents (6488066, in review). Everything here is a recommendation; any tool can be replaced.
+Source: AI Tooling for the Knowledge Base - MCPs, Skills and Agents (6488066, v1). Everything here is a recommendation; any tool can be replaced.
 
 | Status | Meaning |
 | --- | --- |
@@ -15,6 +15,27 @@ Source: AI Tooling for the Knowledge Base - MCPs, Skills and Agents (6488066, in
 - Credentials are created and entered by the user. **Never ask for tokens or passwords in chat**; prefer OAuth or the provider's sign-in flow.
 - Prefer project scope (`-s project`, stored in `.mcp.json`) for project tools and user scope for personal tools. Do not commit files that contain secrets.
 - Third-party tools: read the code or skill first, pin versions, start read-only, prefer official tools.
+
+## Configure MCP access securely (warn the user)
+
+The framework's security principles stay in force (the Knowledge MCP authenticates and authorizes; source permissions are respected). The framework does **not** add permission mechanisms inside the projection or the pipelines: **whatever an account can read is what can enter the knowledge base.** Configuring accounts is the implementing organization's responsibility, but always **warn** the user:
+
+> Give every MCP server an account with **only the permissions it needs**. An account with broader access (for example, an administrator account) can bring restricted content into the knowledge base.
+
+Checklist to share with the user:
+- One dedicated account per integration, never an administrator's personal account.
+- Read-only by default; limited to the spaces, projects and boards that belong in the knowledge base; write access only where needed (for example, drafts).
+- Prefer OAuth; otherwise narrow, expiring, rotated tokens. Avoid catch-all scopes.
+- Secrets in environment variables or a secret manager, never in committed files or logs.
+- Separate accounts per environment; isolate third-party local servers; keep a human in the loop for sensitive operations; review and revoke unused access.
+
+Official references:
+- MCP specification: [Security Best Practices](https://modelcontextprotocol.io/specification/draft/basic/security_best_practices), [Authorization Security Considerations](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization/security-considerations)
+- MCP docs: [Understanding Authorization](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/authorization), [Local Server Security](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/local-server-security)
+- OWASP GenAI Security Project: [A Practical Guide for Secure MCP Server Development](https://genai.owasp.org/resource/a-practical-guide-for-secure-mcp-server-development/); OWASP MCP Top 10
+- Each provider's documentation on service accounts, OAuth apps and token scopes
+
+The same checklist applies to pipeline and adapter accounts; see also the [OWASP Top 10 for LLM Applications](https://genai.owasp.org/).
 
 ## 1. The aief plugin (Verified)
 
