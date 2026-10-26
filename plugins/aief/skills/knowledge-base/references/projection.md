@@ -41,6 +41,7 @@ Tier 2 is additive: it reuses the same adapters and normalized artifacts.
 - The projection must be rebuildable from scratch; deleting it loses nothing.
 - Never index secrets; respect source permissions and classification.
 - Index transcripts and client documents as Evidence (low authority).
+- Exclude the **Agent Workspace** (drafts and reports outside sections 0-8) from indexing (Agent Workflow and Agent Workspace, 6651906, v1).
 
 ## Suggested tools (evaluate, not required)
 

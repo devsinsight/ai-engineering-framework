@@ -1,6 +1,6 @@
 # AI tooling: MCP servers, skills and agents
 
-Source: AI Tooling for the Knowledge Base - MCPs, Skills and Agents (6488066, v1). Everything here is a recommendation; any tool can be replaced.
+Source: AI Tooling for the Knowledge Base - MCPs, Skills and Agents (6488066, v2). Everything here is a recommendation; any tool can be replaced.
 
 | Status | Meaning |
 | --- | --- |
@@ -44,7 +44,7 @@ The same checklist applies to pipeline and adapter accounts; see also the [OWASP
 /plugin install aief@devsinsight
 ```
 
-The repository README is the authority for these steps.
+The repository README is the authority for these steps. The tool is described in Framework Tooling - aief Claude Code Plugin (6160385, v1).
 
 ## 2. MCP servers for the sources (Verified)
 
@@ -80,7 +80,7 @@ Follow each project's own installation instructions; this guide does not repeat 
 
 ## 5. Agents (part of the aief plugin)
 
-The aief plugin ships seven agents. They install with the plugin and appear as `aief:<name>`.
+Source: Agent Workflow and Agent Workspace (6651906, v1). The aief plugin ships seven agents. They install with the plugin and appear as `aief:<name>`.
 
 | Agent | Role | Sections |
 | --- | --- | --- |
