@@ -34,7 +34,7 @@ Work through these steps in order, and confirm the result of each step with the 
 
 ### 0. Prepare the tooling
 
-Ask which systems hold the knowledge, then propose the MCP servers and skills that connect to them. Install only with approval. See [references/tooling.md](references/tooling.md) for verified commands and recommended tools.
+Ask which systems hold the knowledge, then propose the MCP servers and skills that connect to them. Install only with approval. For larger efforts, recommend running the aief agents with the orchestrator as the main session (`claude --agent aief:orchestrator`). See [references/tooling.md](references/tooling.md) for verified commands and recommended tools.
 
 ### 1. Identify the starting scenario
 

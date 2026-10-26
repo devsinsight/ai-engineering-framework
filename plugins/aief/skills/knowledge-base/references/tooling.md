@@ -78,9 +78,26 @@ Follow each project's own installation instructions; this guide does not repeat 
 | skill-creator (Anthropic) | Official | Building new framework skills |
 | TOGAF / enterprise architecture skills (community) | Community | Read them for ideas; adopt useful ideas into framework skills respecting their licenses, rather than installing them as-is |
 
-## 5. Agents (Planned)
+## 5. Agents (part of the aief plugin)
 
-The aief plugin will provide role agents mapped to the common structure ([structure.md](structure.md)): Discovery (6 → 1-3), Business Architect (1, 2), Requirements Analyst (3), Solution Architect (4, 5), Knowledge Curator (0, 7) and Auditor (all). Until they exist, follow this skill's procedure directly.
+The aief plugin ships seven agents. They install with the plugin and appear as `aief:<name>`.
+
+| Agent | Role | Sections |
+| --- | --- | --- |
+| `aief:orchestrator` | Talks with the user, plans with this skill, delegates, consolidates, and writes only after explicit approval | All |
+| `aief:discovery` | Processes evidence into candidate items, glossary terms and gaps | 6 → 1-3 |
+| `aief:business-architect` | Business context and business sections (BIZBOK, BPMN, DDD) | 1, 2 |
+| `aief:requirements-analyst` | Features, stories, acceptance criteria, quality requirements (ISO 29148, INVEST, Example Mapping) | 3 |
+| `aief:solution-architect` | Technical section and decisions (arc42, C4, MADR) | 4, 5 |
+| `aief:knowledge-curator` | Key and source registries, glossary, duplicates, tags, gaps view (SKOS, KCS) | 0, 7 |
+| `aief:auditor` | Checks the mandatory structure, common record, provenance and links; report only | All |
+
+How they work together:
+- **Run the orchestrator as the main session:** `claude --agent aief:orchestrator`. As the main session it can ask you questions and request approval. Invoked as a subagent, it cannot ask, so it returns a proposal with pending approvals instead.
+- **Specialists only read and return results.** Everything goes through the orchestrator, which asks the user whether each change is adequate and requests permission before writing.
+- **Agent Workspace:** drafts and reports are stored, after approval, in an area of the knowledge source outside sections 0-8 that is **not indexed**. When an item is validated, it moves to its final section.
+- Claude Code can restrict which tools an agent uses, but not which space it writes to; the write boundary relies on the approval flow and on least-privilege accounts.
+- The auditor runs a deterministic validation script first when one exists (planned by the framework).
 
 ## 6. Indexing (later stage)
 

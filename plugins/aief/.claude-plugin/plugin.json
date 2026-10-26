@@ -1,8 +1,8 @@
 {
   "name": "aief",
   "displayName": "AI Engineering Framework",
-  "version": "0.2.0",
-  "description": "Skills for applying the AI Engineering Framework (AIEF). First skill: guide the construction of a governed, multi-source project knowledge base.",
+  "version": "0.3.0",
+  "description": "Skills and agents for applying the AI Engineering Framework (AIEF): guide and coordinate the construction of a governed, multi-source project knowledge base.",
   "author": {
     "name": "devsinsight",
     "url": "https://github.com/devsinsight"

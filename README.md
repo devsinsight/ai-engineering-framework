@@ -11,7 +11,7 @@ Binary framework artifacts are stored under `/assets` according to ADR-004.
 ## Structure
 
 - `docs/` — version-controlled documentation supplements.
-- `agents/` — agent definitions and prompts.
+- `agents/` — see `plugins/aief/agents/` (agents ship inside the plugin).
 - `schemas/` — normalized knowledge and integration schemas.
 - `generators/` — deterministic generators/templates.
 - `assets/` — canonical binary assets.
@@ -19,7 +19,7 @@ Binary framework artifacts are stored under `/assets` according to ADR-004.
 
 ## Claude Code plugin
 
-This repository is a Claude Code plugin marketplace. The `aief` plugin currently ships one skill, `knowledge-base`, which guides building a governed, multi-source project knowledge base that follows the framework.
+This repository is a Claude Code plugin marketplace. The `aief` plugin ships the `knowledge-base` skill, which guides building a governed, multi-source project knowledge base that follows the framework, and seven agents that coordinate the work (`aief:orchestrator` plus six specialists).
 
 Install it from a Claude Code session:
 
@@ -34,4 +34,8 @@ On Claude Code 2.1.275 or later, one step is enough:
 /plugin install aief --marketplace devsinsight/ai-engineering-framework
 ```
 
-Claude uses the skill when a task matches it, or you can invoke it directly with `/aief:knowledge-base`.
+Claude uses the skill when a task matches it, or you can invoke it directly with `/aief:knowledge-base`. To coordinate the agents, start a session with the orchestrator:
+
+```
+claude --agent aief:orchestrator
+```
