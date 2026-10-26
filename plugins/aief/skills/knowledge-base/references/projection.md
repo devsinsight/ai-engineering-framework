@@ -1,6 +1,6 @@
 # Index and semantic projection
 
-Sources: ADR-007 (5898241, v1), Semantic Knowledge Platform - Cloud + MCP (688162, v3), Normalized Knowledge Artifact Contract (2686977, v1), Building the Knowledge Base (6094849, v2).
+Sources: ADR-007 (5898241, v1), Semantic Knowledge Platform - Cloud + MCP (688162, v3), Normalized Knowledge Artifact Contract (2686977, v2), Building the Knowledge Base (6094849, v2).
 
 ## Pipeline shape
 

@@ -13,7 +13,7 @@ Items of the same type share the same structure, so consumers know where each pi
 | title | Human-readable name |
 | source, ID, URL, version | Where the authoritative item lives (provided by the source system) |
 | owner | Who answers for the content |
-| state | `draft` · `validated` · `archived` |
+| state | `draft` · `validated` · `archived` (`draft` covers the KCS states Work in Progress and Not Validated; see [contract.md](contract.md)) |
 
 ## Types
 

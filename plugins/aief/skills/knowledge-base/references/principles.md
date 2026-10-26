@@ -10,8 +10,8 @@ This file **summarizes** rules from the AI Engineering Framework. It is a deriva
 | 4 | Binary assets may live in a separate asset store. Editable visuals are authoritative in their visual tool; exports are renditions. | ADR-004 (2162689, v1); ADR-005 (2719745, v1) |
 | 5 | The semantic index is a projection, never an authority, and must be fully rebuildable from the sources. | ADR-001 (852001, v3); ADR-002 (720914, v2) |
 | 6 | Summaries, OCR, captions, translations and embeddings are derivatives, never authority. | ADR-002 (720914, v2); Multimodal Knowledge & Artifact Ingestion (786465, v4) |
-| 7 | Provenance is mandatory: source, provider ID, canonical URL, version. | Normalized Knowledge Artifact Contract (2686977, v1) |
-| 8 | Adapters normalize each provider into a common contract; missing provider capabilities are documented as reduced fidelity, never fabricated. | Normalized Knowledge Artifact Contract (2686977, v1); ADR-003 (1048580, v1) |
+| 7 | Provenance is mandatory: source, provider ID, canonical URL, version. | Normalized Knowledge Artifact Contract (2686977, v2) |
+| 8 | Adapters normalize each provider into a common contract; missing provider capabilities are documented as reduced fidelity, never fabricated. | Normalized Knowledge Artifact Contract (2686977, v2); ADR-003 (1048580, v1) |
 | 9 | Knowledge gaps are first-class: agents report gaps instead of inventing missing truth. | 03 - Knowledge Architecture (425986, v6) |
 | 10 | Work records (analysis, plans) live in the canonical source, anchored to a work item, and follow a KCS lifecycle; AI drafts, humans validate. | ADR-006 (5865473, v1) |
 | 11 | Access is tiered: a deterministic index first; a semantic projection behind an MCP when complexity warrants it. | ADR-007 (5898241, v1) |

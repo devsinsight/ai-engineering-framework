@@ -97,7 +97,7 @@ Every unanswered question, assumption, conflict or missing dependency becomes a 
 - **Tier 1:** a deterministic index of items (key, type, section, source/ID/URL/version, state) plus direct reads from the sources.
 - **Tier 2:** a semantic projection (for example, Qdrant) behind an MCP server, with semantic search and exact lookup by key or ID.
 
-Choose Tier 2 when there are several sources, multimodal content, heterogeneous permissions, or a corpus too large for direct reading. See [references/projection.md](references/projection.md).
+Choose Tier 2 when there are several sources, multimodal content, heterogeneous permissions, or a corpus too large for direct reading. See [references/projection.md](references/projection.md). Adapters map every source into the common contract: [references/contract.md](references/contract.md).
 
 ## How to respond
 
