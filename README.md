@@ -10,12 +10,9 @@ Binary framework artifacts are stored under `/assets` according to ADR-004.
 
 ## Structure
 
-- `docs/` — version-controlled documentation supplements.
-- `agents/` — see `plugins/aief/agents/` (agents ship inside the plugin).
-- `schemas/` — normalized knowledge and integration schemas.
-- `generators/` — deterministic generators/templates.
-- `assets/` — canonical binary assets.
-- `plugins/aief/` — Claude Code plugin with the framework's skills.
+- `.claude-plugin/` — declares this repository as a Claude Code plugin marketplace.
+- `plugins/aief/` — the framework plugin: the `knowledge-base` skill and the agents.
+- `assets/` — canonical binary assets and asset metadata (ADR-004).
 
 ## Claude Code plugin
 
