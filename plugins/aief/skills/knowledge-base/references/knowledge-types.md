@@ -1,6 +1,6 @@
 # Knowledge types
 
-Source: Building the Knowledge Base - Capture Methods, Linking and Suggested Tools (6094849, v2), section "Knowledge Types". This file summarizes it; if the page has a newer version, the page wins.
+Source: Building the Knowledge Base - Capture Methods, Linking and Suggested Tools (6094849, v3), section "Knowledge Types"; 03 - Work Products (8421377, v1), the catalog of every work product with its owner role and template. This file summarizes them; if a page has a newer version, the page wins.
 
 Items of the same type share the same structure, so consumers know where each piece of information is. Keep the set small; if a project needs another type, add it following the same pattern (common record + minimum structure + authority class).
 
@@ -43,4 +43,4 @@ They are joined by the shared key (and a native link when available). Delivery d
 
 ## Readiness K0-K5 (Feature only)
 
-K0 Unknown · K1 Discovered · K2 Documented · K3 Business validated · K4 Implementation ready · K5 Implemented and verified. Source: 03 - Knowledge Architecture (425986, v7).
+K0 Unknown · K1 Discovered · K2 Documented · K3 Business validated · K4 Implementation ready · K5 Implemented and verified. Source: Knowledge Architecture (425986, v8).

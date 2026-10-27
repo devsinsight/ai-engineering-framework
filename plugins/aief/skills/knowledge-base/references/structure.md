@@ -1,6 +1,6 @@
 # The common structure of a knowledge base
 
-Source: Knowledge Base Structure - Mature Frameworks and Reference Structure (6225921, v1). This file summarizes it; if the page has a newer version, the page wins.
+Source: Knowledge Base Structure - Mature Frameworks and Reference Structure (6225921, v2). This file summarizes it; if the page has a newer version, the page wins.
 
 | What | Status |
 | --- | --- |
