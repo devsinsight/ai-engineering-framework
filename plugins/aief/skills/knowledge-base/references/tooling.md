@@ -1,6 +1,6 @@
 # AI tooling: MCP servers, skills and agents
 
-Source: AI Tooling for the Knowledge Base - MCPs, Skills and Agents (6488066, v3). Everything here is a recommendation; any tool can be replaced.
+Source: AI Tooling for the Knowledge Base - MCPs, Skills and Agents (6488066, v5). Everything here is a recommendation; any tool can be replaced.
 
 | Status | Meaning |
 | --- | --- |
@@ -44,7 +44,7 @@ The same checklist applies to pipeline and adapter accounts; see also the [OWASP
 /plugin install aief@devsinsight
 ```
 
-The repository README is the authority for these steps. The tool is described in Framework Tooling - aief Claude Code Plugin (6160385, v3).
+The repository README is the authority for these steps. The tool is described in Framework Tooling - aief Claude Code Plugin (6160385, v5).
 
 ## 2. MCP servers for the sources (Verified)
 
@@ -73,7 +73,7 @@ Follow each project's own installation instructions; this guide does not repeat 
 
 | Skill | Status | Use |
 | --- | --- | --- |
-| aief:knowledge-base | Verified | This skill |
+| aief:knowledge-base | Verified (Tier 2 steps not yet used) | This skill: building the knowledge base, and, for Tier 2, choosing the technologies and building the platform |
 | PDF, DOCX, XLSX, PPTX document skills (Anthropic) | Official | Reading client documents (Evidence); see https://github.com/anthropics/skills |
 | skill-creator (Anthropic) | Official | Building new framework skills |
 | TOGAF / enterprise architecture skills (community) | Community | Read them for ideas; adopt useful ideas into framework skills respecting their licenses, rather than installing them as-is |
