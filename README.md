@@ -11,12 +11,12 @@ Binary framework artifacts are stored under `/assets` according to ADR-004.
 ## Structure
 
 - `.claude-plugin/` — declares this repository as a Claude Code plugin marketplace.
-- `plugins/aief/` — the framework plugin: the `knowledge-base` skill and the agents.
+- `plugins/aief/` — the framework plugin: the `knowledge-base` and `knowledge-platform` skills and the agents.
 - `assets/` — canonical binary assets and asset metadata (ADR-004).
 
 ## Claude Code plugin
 
-This repository is a Claude Code plugin marketplace. The `aief` plugin ships the `knowledge-base` skill, which guides building a governed, multi-source project knowledge base that follows the framework, and seven agents that coordinate the work (`aief:orchestrator` plus six specialists).
+This repository is a Claude Code plugin marketplace. The `aief` plugin ships two skills: `knowledge-base`, which guides building a governed, multi-source project knowledge base that follows the framework, and `knowledge-platform`, which guides building the Tier 2 platform that indexes it ([devsinsight/aief-knowledge-platform](https://github.com/devsinsight/aief-knowledge-platform)). It also ships seven agents that coordinate the work (`aief:orchestrator` plus six specialists).
 
 Install it from a Claude Code session:
 
@@ -31,7 +31,7 @@ On Claude Code 2.1.275 or later, one step is enough:
 /plugin install aief --marketplace devsinsight/ai-engineering-framework
 ```
 
-Claude uses the skill when a task matches it, or you can invoke it directly with `/aief:knowledge-base`. To coordinate the agents, start a session with the orchestrator:
+Claude uses a skill when a task matches it, or you can invoke it directly with `/aief:knowledge-base` or `/aief:knowledge-platform`. To coordinate the agents, start a session with the orchestrator:
 
 ```
 claude --agent aief:orchestrator
