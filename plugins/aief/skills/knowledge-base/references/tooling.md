@@ -44,7 +44,7 @@ The same checklist applies to pipeline and adapter accounts; see also the [OWASP
 /plugin install aief@devsinsight
 ```
 
-The repository README is the authority for these steps. The tool is described in Framework Tooling - aief Claude Code Plugin (6160385, v1).
+The repository README is the authority for these steps. The tool is described in Framework Tooling - aief Claude Code Plugin (6160385, v2).
 
 ## 2. MCP servers for the sources (Verified)
 
