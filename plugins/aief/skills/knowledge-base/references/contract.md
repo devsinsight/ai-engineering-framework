@@ -1,6 +1,6 @@
 # Normalized Knowledge Artifact (summary for adapter builders)
 
-Source: Normalized Knowledge Artifact Contract (2686977, v2). This file summarizes it; if the page has a newer version, the page wins.
+Source: Normalized Knowledge Artifact Contract (2686977, v3). This file summarizes it; if the page has a newer version, the page wins.
 
 Every source adapter translates provider-specific content into this provider-neutral model before indexing. **Normalization never changes authority**, and a missing provider capability is reported as reduced fidelity, never fabricated.
 

@@ -1,6 +1,6 @@
 # Knowledge capture methods
 
-Recommendations, not mandatory steps. Choose what fits the client, the domain and the scenario. Source: Building the Knowledge Base (6094849, v2).
+Recommendations, not mandatory steps. Choose what fits the client, the domain and the scenario. Source: Building the Knowledge Base (6094849, v3).
 
 | Method | What it is | Use it when | Output into the knowledge base |
 | --- | --- | --- | --- |
