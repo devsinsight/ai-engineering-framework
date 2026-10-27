@@ -1,6 +1,6 @@
 # Linking knowledge across sources
 
-Source: Building the Knowledge Base (6094849, v2).
+Sources: Building the Knowledge Base (6094849, v2); Knowledge Ingestion Pipelines - Guide (6750209, v2, section 5).
 
 The hardest part of a dispersed knowledge base is **linking**, not indexing. A feature in the work item tool, its documentation pages and its diagram describe the same thing, but semantic search only knows they are *similar*. An explicit shared key makes the relationship certain, for AI agents and deterministic tools alike.
 
@@ -30,7 +30,7 @@ A deterministic check can then flag unknown or misspelled tags. The registry liv
 
 ## Provider notes
 
-- **Wiki pages (for example, Confluence):** labels are lowercase and space-free; they fit the convention directly.
+- **Wiki pages (for example, Confluence):** the page's **own key** goes in its Page Properties table (see [templates/_common-record.md](templates/_common-record.md)), not in a label. **Labels are traceability:** each label is the key of another item (for example, the feature a business page supports), and the ingestion pipeline turns it into a relationship with the work items and pages that carry the same key. Labels are lowercase and allow no spaces or colons, so the label is the key itself (`feature-checkout-payment`), and work items use exactly the same text as their tag.
 - **Work items (for example, Azure DevOps):** tags are case-insensitive; multiple tags are separated by semicolons.
 - **Visual boards (for example, Miro):** tags apply only to some object types (such as sticky notes and cards). For diagrams and frames, put the key in the frame title, or link the frame from the related page.
 - **Static files (PDF, images, CSV):** put the key in the file name or in the asset metadata.

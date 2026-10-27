@@ -1,7 +1,7 @@
 {
   "name": "aief",
   "displayName": "AI Engineering Framework",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Skills and agents for applying the AI Engineering Framework (AIEF): guide and coordinate the construction of a governed, multi-source project knowledge base.",
   "author": {
     "name": "devsinsight",
