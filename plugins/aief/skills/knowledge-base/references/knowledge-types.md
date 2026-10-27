@@ -1,6 +1,6 @@
 # Knowledge types
 
-Source: Building the Knowledge Base - Capture Methods, Linking and Suggested Tools (6094849, v3), section "Knowledge Types"; 03 - Work Products (8421377, v1), the catalog of every work product with its owner role and template. This file summarizes them; if a page has a newer version, the page wins.
+Source: Building the Knowledge Base - Capture Methods, Linking and Suggested Tools (6094849, v3), section "Knowledge Types"; 03 - Work Products (8421377, v2), the catalog of every work product with its owner role and template. This file summarizes them; if a page has a newer version, the page wins.
 
 Items of the same type share the same structure, so consumers know where each piece of information is. Keep the set small; if a project needs another type, add it following the same pattern (common record + minimum structure + authority class).
 
