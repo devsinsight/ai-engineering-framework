@@ -1,6 +1,6 @@
 # Processing knowledge by format
 
-Source: Multimodal Knowledge & Artifact Ingestion (786465, v4); ADR-002 (720914, v2); Knowledge Ingestion Pipelines - Guide (6750209, v2, sections 6-8). This file summarizes them; if a page has a newer version, the page wins.
+Source: Multimodal Knowledge & Artifact Ingestion (786465, v5); ADR-002 (720914, v3); Knowledge Ingestion Pipelines - Guide (6750209, v2, sections 6-8). This file summarizes them; if a page has a newer version, the page wins.
 
 This file says **what** each format must produce and **what provenance** to keep. It does not prescribe how to implement a parser.
 

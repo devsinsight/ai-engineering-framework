@@ -43,4 +43,4 @@ They are joined by the shared key (and a native link when available). Delivery d
 
 ## Readiness K0-K5 (Feature only)
 
-K0 Unknown · K1 Discovered · K2 Documented · K3 Business validated · K4 Implementation ready · K5 Implemented and verified. Source: 03 - Knowledge Architecture (425986, v6).
+K0 Unknown · K1 Discovered · K2 Documented · K3 Business validated · K4 Implementation ready · K5 Implemented and verified. Source: 03 - Knowledge Architecture (425986, v7).
