@@ -1,6 +1,6 @@
 # Index and semantic projection
 
-Sources: ADR-007 (5898241, v1), Semantic Knowledge Platform - Cloud + MCP (688162, v6), Normalized Knowledge Artifact Contract (2686977, v3), Building the Knowledge Base (6094849, v3).
+Sources: ADR-007 (5898241, v1), Semantic Knowledge Platform - Cloud + MCP (688162, v7), Normalized Knowledge Artifact Contract (2686977, v3), Building the Knowledge Base (6094849, v3).
 
 ## Pipeline shape
 
@@ -41,23 +41,11 @@ Tier 2 is additive: it reuses the same adapters and normalized artifacts.
 - The projection must be rebuildable from scratch; deleting it loses nothing.
 - Never index secrets; respect source permissions and classification.
 - Index transcripts and client documents as Evidence (low authority).
-- Exclude the **Agent Workspace** (drafts and reports outside sections 0-8) from indexing (Agent Workflow and Agent Workspace, 6651906, v1).
+- Exclude the **Agent Workspace** (drafts and reports outside sections 0-8) from indexing (Agent Workflow and Agent Workspace, 6651906, v2).
 
 ## Reference defaults and options
 
-Every technology choice is an **option**; the framework names a **reference default** for each one. Recommend the default unless the user has a reason to choose otherwise, and point to the page that lists the alternatives and the criteria.
-
-| Concern | Reference default | Options and criteria |
-| --- | --- | --- |
-| Metadata from wiki pages | Section from the page tree; key, type and state from Page Properties; labels as traceability; missing fields indexed and flagged | Knowledge Ingestion Pipelines - Guide (6750209, v2), section 5 |
-| Chunking | By structure (Docling `HybridChunker`), heading path as context, no overlap | 6750209, v2, section 6 |
-| Embeddings | `BAAI/bge-base-en-v1.5` (dense) + `Qdrant/bm25` (sparse), through FastEmbed; the knowledge base is in English | Semantic Search Technology Catalog (6717441, v3), section 4 |
-| Reranker | None; add one only when a golden set shows the need | 6717441, v3, sections 5-6 |
-| Images | Reference plus deterministic text; the MCP returns the link | 6750209, v2, section 7 |
-| Vision model, image repository | Off; none | 6717441, v3, sections 7-8 |
-| Visual boards (Miro) | Read by API, one chunk per frame, wiki links become relationships | 6750209, v2, section 8 |
-| Projection | Qdrant | 6717441, v3, sections 1-3; Qdrant Reference Implementation (6782977, v2) |
-| Pipeline service | Hexagonal Python service; code in `devsinsight/aief-knowledge-platform` | Proposed Architecture - Knowledge Pipeline Service (6914049, v5) |
+Every technology choice is an **option** with a **reference default**. The full list, with when to choose each alternative, is in [technology.md](technology.md). How to build the Tier 2 platform is in [platform.md](platform.md).
 
 ## Suggested tools (evaluate, not required)
 

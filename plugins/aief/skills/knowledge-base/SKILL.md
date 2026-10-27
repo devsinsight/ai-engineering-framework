@@ -1,6 +1,6 @@
 ---
 name: knowledge-base
-description: Guides building a project knowledge base that follows the AI Engineering Framework (AIEF) - one knowledge base for business and technology, organized in a mandatory common structure (catalog, business context, business, product, technical, decisions, evidence, gaps, industry extensions), with authority distributed across the sources and access centralized through one index. Use when starting, auditing, structuring or unifying a knowledge base; inventorying sources (wikis, work items, visual boards, static files, meeting transcripts); choosing capture methods, diagrams or frameworks (BIZBOK, ISO 29148, arc42, C4, DDD, BPMN); designing cross-source tags and keys; processing documents by format; setting up the MCP servers, skills and agents that support the work; or planning ingestion into a searchable index or semantic projection (for example, Qdrant behind an MCP).
+description: Guides building a project knowledge base that follows the AI Engineering Framework (AIEF) - one knowledge base for business and technology, organized in a mandatory common structure (catalog, business context, business, product, technical, decisions, evidence, gaps, industry extensions), with authority distributed across the sources and access centralized through one index. Use when starting, auditing, structuring or unifying a knowledge base; inventorying sources (wikis, work items, visual boards, static files, meeting transcripts); choosing capture methods, diagrams or frameworks (BIZBOK, ISO 29148, arc42, C4, DDD, BPMN); designing cross-source tags and keys; processing documents by format; setting up the MCP servers, skills and agents that support the work; choosing the access tier and the technologies (projection, embeddings, chunking, reranker, vision) from the framework's options and reference defaults; or building and operating the Tier 2 platform - a hexagonal Python service that ingests the sources into a semantic projection (Qdrant by default) behind a read-only Knowledge MCP and an Ops MCP.
 ---
 
 # Build a knowledge base with the AI Engineering Framework
@@ -21,6 +21,7 @@ These come from the framework's principles. See [references/principles.md](refer
 4. **The index is rebuildable.** Deleting the index or semantic projection must never lose knowledge.
 5. **AI proposes, humans validate.** Content you draft is `draft` until an authorized person validates it.
 6. **Ask before writing to any source system or changing any configuration** (wiki, work item tool, board, MCP setup). Show what you intend to do and wait for explicit approval. Never ask for tokens or passwords in chat.
+7. **Technologies are options with a reference default.** Recommend the default unless the user has a reason to choose otherwise; a deviation is the user's decision and is recorded as an ADR.
 
 ## What is mandatory and what is recommended
 
@@ -92,12 +93,28 @@ When the business has knowledge the core types do not cover, declare an extensio
 
 Every unanswered question, assumption, conflict or missing dependency becomes a **Knowledge Gap** in the work management system, with an owner and an impact. Use the provider's dedicated type if it has one; otherwise the closest type plus the tag `knowledge-gap`. See [references/templates/knowledge-gap.md](references/templates/knowledge-gap.md).
 
-### 9. Plan the index and the projection
+### 9. Choose the access tier
 
 - **Tier 1:** a deterministic index of items (key, type, section, source/ID/URL/version, state) plus direct reads from the sources.
 - **Tier 2:** a semantic projection (for example, Qdrant) behind an MCP server, with semantic search and exact lookup by key or ID.
 
-Choose Tier 2 when there are several sources, multimodal content, heterogeneous permissions, or a corpus too large for direct reading. See [references/projection.md](references/projection.md). Adapters map every source into the common contract: [references/contract.md](references/contract.md).
+Choose Tier 2 when there are several sources, multimodal content, heterogeneous permissions, or a corpus too large for direct reading. See [references/projection.md](references/projection.md). Adapters map every source into the common contract: [references/contract.md](references/contract.md). With Tier 1, the procedure ends here.
+
+### 10. Choose the technologies (Tier 2)
+
+For each concern (projection, embeddings, sparse model, chunking, reranker, images, vision, image repository, visual boards), present the reference default, when another option fits better, and the cost of switching. Ask the user to confirm or choose. See [references/technology.md](references/technology.md).
+
+### 11. Build and operate the platform (Tier 2)
+
+Generate the platform in the project's own repository (ask before creating it), following the framework's hexagonal architecture:
+
+1. **Scaffold:** uv workspace with three packages (`core`, `pipeline`, `knowledge-mcp`), layer contracts enforced by import-linter, CI. Copy the tested pieces in [assets/platform/](assets/platform/) as they are; generate the rest following [references/platform.md](references/platform.md).
+2. **Walking skeleton:** one wiki page → contract → chunks → embeddings → projection → `knowledge.search`, with its acceptance criteria.
+3. **Grow in increments**, one pull request each: complete source adapters (wiki first, then work items, then visual boards), run repository and job queue, CLI, webhooks, scheduler, Ops MCP, the remaining Knowledge MCP tools. Apply [references/ingestion.md](references/ingestion.md).
+4. **Verify every increment** and measure retrieval with a golden set before tuning: [references/verification.md](references/verification.md).
+5. **Operate** with least-privilege, read-only source accounts; destructive operations (rebuilding a collection) need explicit approval.
+
+Never pin versions from memory: resolve and verify them when building. Ask before creating repositories, pushing, opening pull requests, running against real sources, or deleting a collection. When a reusable piece has proven itself in a real project, propose adding it to the assets.
 
 ## How to respond
 

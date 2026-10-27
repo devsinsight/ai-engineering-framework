@@ -16,7 +16,7 @@ Binary framework artifacts are stored under `/assets` according to ADR-004.
 
 ## Claude Code plugin
 
-This repository is a Claude Code plugin marketplace. The `aief` plugin ships the `knowledge-base` skill, which guides building a governed, multi-source project knowledge base that follows the framework, and seven agents that coordinate the work (`aief:orchestrator` plus six specialists).
+This repository is a Claude Code plugin marketplace. The `aief` plugin ships the `knowledge-base` skill, which guides building a governed, multi-source project knowledge base that follows the framework: from capturing and structuring the knowledge to choosing the technologies and building the Tier 2 platform (pipelines, semantic projection, Knowledge MCP) in the project's own repository, with tested assets for its deterministic parts. It also ships seven agents that coordinate the work (`aief:orchestrator` plus six specialists).
 
 Install it from a Claude Code session:
 

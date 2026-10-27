@@ -1,0 +1,51 @@
+# Hexagonal layer contracts for the Tier 2 platform (import-linter).
+# Paste into the workspace root pyproject.toml. CI runs `lint-imports`.
+# Package names follow references/platform.md; adjust them if the project renames the packages.
+
+[tool.importlinter]
+root_packages = ["aief_core", "aief_pipeline", "aief_knowledge_mcp"]
+
+[[tool.importlinter.contracts]]
+name = "Core is pure: domain and ports import no application, adapters or infrastructure"
+type = "forbidden"
+source_modules = ["aief_core"]
+forbidden_modules = [
+    "aief_pipeline",
+    "aief_knowledge_mcp",
+    "llama_index",
+    "docling",
+    "fastembed",
+    "qdrant_client",
+    "httpx",
+    "fastapi",
+    "mcp",
+]
+allow_indirect_imports = false
+
+[[tool.importlinter.contracts]]
+name = "Use cases depend on ports, never on adapters, entry points or infrastructure"
+type = "forbidden"
+source_modules = ["aief_pipeline.application"]
+forbidden_modules = [
+    "aief_pipeline.adapters",
+    "aief_pipeline.entrypoints",
+    "llama_index",
+    "docling",
+    "fastembed",
+    "qdrant_client",
+    "httpx",
+    "fastapi",
+    "mcp",
+]
+
+[[tool.importlinter.contracts]]
+name = "Adapters never call entry points"
+type = "forbidden"
+source_modules = ["aief_pipeline.adapters"]
+forbidden_modules = ["aief_pipeline.entrypoints"]
+
+[[tool.importlinter.contracts]]
+name = "Knowledge MCP is isolated from the pipeline"
+type = "forbidden"
+source_modules = ["aief_knowledge_mcp"]
+forbidden_modules = ["aief_pipeline"]
