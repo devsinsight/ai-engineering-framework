@@ -1,6 +1,6 @@
 # Ingestion rules for the adapters and the pipeline
 
-Sources: Knowledge Ingestion Pipelines - Guide (6750209, v3), sections 4-8; Qdrant Reference Implementation (6782977, v2), section 5; Normalized Knowledge Artifact Contract (2686977, v3); Multimodal Knowledge & Artifact Ingestion (786465, v5). This file summarizes them; if a page has a newer version, the page wins.
+Sources: Knowledge Ingestion Pipelines - Guide (6750209, v3), sections 4-8; Qdrant Reference Implementation (6782977, v2), section 5; Normalized Knowledge Artifact Contract (2686977, v4); Multimodal Knowledge & Artifact Ingestion (786465, v5). This file summarizes them; if a page has a newer version, the page wins.
 
 ## Pipeline rules
 

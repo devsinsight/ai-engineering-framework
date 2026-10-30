@@ -1,6 +1,6 @@
 # Knowledge types
 
-Source: Building the Knowledge Base - Capture Methods, Linking and Suggested Tools (6094849, v3), section "Knowledge Types"; 03 - Work Products (8421377, v2), the catalog of every work product with its owner role and template. This file summarizes them; if a page has a newer version, the page wins.
+Source: Building the Knowledge Base - Capture Methods, Linking and Suggested Tools (6094849, v5), section "Knowledge Types"; 03 - Work Products (8421377, v3), the catalog of every work product with its owner role and template. This file summarizes them; if a page has a newer version, the page wins.
 
 Items of the same type share the same structure, so consumers know where each piece of information is. Keep the set small; if a project needs another type, add it following the same pattern (common record + minimum structure + authority class).
 
@@ -30,6 +30,7 @@ Authority classes come from the framework: textual knowledge, editable visual, b
 | **User Story** | A slice of a feature | Story, acceptance criteria (Given/When/Then), feature key | Work item | [user-story](templates/user-story.md) |
 | **Diagram** | A visual view | What it shows, related keys; key in the title | Editable visual | [diagram](templates/diagram.md) |
 | **Evidence** | Uncurated source material | Origin, date, participants, related keys; low authority | Binary asset | [evidence](templates/evidence.md) |
+| **Meeting Record** (optional) | What a meeting said and agreed, and what changed because of it | Summary with consent, agreements (each linked to the items it changes), not agreed, actions, open questions (linked to their Knowledge Gaps), items updated with their new versions, transcript | Textual knowledge (the record); the transcript is Evidence | [meeting-record](templates/meeting-record.md) |
 | **Knowledge Gap** | Something unknown or contradictory | Question, kind, impact, owner, status | Work item | [knowledge-gap](templates/knowledge-gap.md) |
 
 ## The two faces of a Feature

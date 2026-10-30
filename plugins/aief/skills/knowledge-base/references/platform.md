@@ -1,6 +1,6 @@
 # The Tier 2 platform
 
-Sources: Proposed Architecture - Knowledge Pipeline Service (6914049, v6); Semantic Knowledge Platform - Cloud + MCP (688162, v7); Qdrant Reference Implementation (6782977, v2); Normalized Knowledge Artifact Contract (2686977, v3); ADR-003 (1048580, v1); ADR-007 (5898241, v1); ADR-008 (8454170, v1). Read the current version of each page before designing; if a page differs from this summary, the page wins.
+Sources: Proposed Architecture - Knowledge Pipeline Service (6914049, v6); Semantic Knowledge Platform - Cloud + MCP (688162, v7); Qdrant Reference Implementation (6782977, v2); Normalized Knowledge Artifact Contract (2686977, v4); ADR-003 (1048580, v1); ADR-007 (5898241, v1); ADR-008 (8454170, v1). Read the current version of each page before designing; if a page differs from this summary, the page wins.
 
 The platform is **generated per project** in the project's own repository (for example, `<project>-knowledge-platform`), following this architecture. There is no shared platform repository: reusable pieces live in this skill's [assets/platform/](../assets/platform/), and grow only with pieces proven in real projects (ADR-008).
 

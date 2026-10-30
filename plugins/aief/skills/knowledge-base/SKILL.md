@@ -65,7 +65,7 @@ Agree on the tag convention and start the **key registry** ([template](reference
 
 Recommend capture methods that fit the scenario: SECI, knowledge audit, Event Storming, Domain Storytelling, Example Mapping or KCS. See [references/capture-methods.md](references/capture-methods.md).
 
-Treat transcripts and client documents as **evidence**: keep them with low authority and curate their rules and decisions into the structure. Recording requires consent. Process each format as described in [references/formats.md](references/formats.md).
+Treat transcripts and client documents as **evidence**: keep them with low authority and curate their rules and decisions into the structure. Recording requires consent. Store transcripts intact; what to do with them later is the consumer's decision. If the team keeps a **Meeting Record** (optional; [template](references/templates/meeting-record.md)), it links agreements to the item versions they produced and records open questions as Knowledge Gaps. Process each format as described in [references/formats.md](references/formats.md).
 
 ### 6. Organize the knowledge in the common structure
 
