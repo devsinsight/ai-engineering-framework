@@ -52,6 +52,7 @@ A diagram is a *view*: put the item's key in the diagram or frame title so it st
 
 ### 6. Evidence: source material not yet curated
 **Mandatory:** origin, date, participants (with consent for sessions), classification, related keys, and the items curated from it ([template](templates/evidence.md)).
+Transcripts are stored intact, with timestamps, speakers, consent and classification. A team may also keep a **Meeting Record** (optional; [template](templates/meeting-record.md)): agreements linked to the item versions they produced, open questions linked to their Knowledge Gaps, and the transcript as evidence.
 **Recommended:** SECI externalization (curate rules and decisions into sections 1-5); timestamped transcripts with speakers.
 
 ### 7. Knowledge Gaps: what we do not know yet

@@ -4,7 +4,7 @@ Copy this module as-is into the platform's core package (for example
 ``packages/core/src/aief_core/domain/contract.py``). It uses only the standard
 library, so the domain layer stays free of infrastructure.
 
-Sources: Normalized Knowledge Artifact Contract (Confluence 2686977, v3);
+Sources: Normalized Knowledge Artifact Contract (Confluence 2686977, v4);
 Knowledge Ingestion Pipelines - Guide (6750209, v3), sections 5-6; ADR-008 (8454170, v1).
 """
 

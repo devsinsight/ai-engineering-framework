@@ -1,6 +1,6 @@
 # Linking knowledge across sources
 
-Sources: Building the Knowledge Base (6094849, v3); Knowledge Ingestion Pipelines - Guide (6750209, v3, section 5).
+Sources: Building the Knowledge Base (6094849, v5); Knowledge Ingestion Pipelines - Guide (6750209, v3, section 5).
 
 The hardest part of a dispersed knowledge base is **linking**, not indexing. A feature in the work item tool, its documentation pages and its diagram describe the same thing, but semantic search only knows they are *similar*. An explicit shared key makes the relationship certain, for AI agents and deterministic tools alike.
 
