@@ -19,9 +19,17 @@ This file says **what** each format must produce and **what provenance** to keep
 
 ## Questions to add to the knowledge audit
 
-- Which formats exist in each source, and **how many** items of each? (3 PDFs and 4,000 recordings lead to very different decisions, including Tier 1 vs Tier 2.)
+- Which formats exist in each source, and **how many** items of each? (3 PDFs and 4,000 recordings lead to very different decisions, including Tier 1 vs Tier 2.) Count in retrieval units: pages, work items, files, and for visual boards the boards and their frames, not individual shapes or stickies.
 - Which items are originals and which are exports or copies?
 - Are there recordings that need consent or contain personal data?
+
+## Reading through MCP servers: check fidelity
+
+An MCP server is an adapter, and adapters lose things. Before concluding that content is missing or contradictory, check that the reader did not drop it:
+
+- Simplified formats (for example, Markdown from a wiki) may render macros empty or drop them: dates, status lozenges, page-properties tables, child-page lists, embedded boards.
+- Bulk listings and searches may return titles or excerpts without bodies, or cut long bodies.
+- When an item matters, read it individually in the richest format the server offers (for example, HTML or the native document format), and record what could not be read as reduced fidelity in the source registry. Never report a gap that comes only from the reader.
 
 ## Binary transfer
 

@@ -9,6 +9,7 @@
 | Date | <YYYY-MM-DD> |
 | Participants | <for sessions; consent obtained: yes/no> |
 | Classification | public · internal · confidential · personal data |
+| Version | intact original · derivative of `evidence-…` (cleaned transcript, summary, translation); a derivative never replaces the original |
 | Related keys | `feature-…`, `rule-…` |
 
 ## Curated into

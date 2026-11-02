@@ -39,7 +39,7 @@ Every source adapter translates provider-specific content into this provider-neu
 
 ## Artifact types
 
-Vision · Glossary · Domain · Capability · Feature · Rule (Business Rule) · ADR (Decision) · UserStory · KnowledgeGap · WorkRecord · Evidence · MeetingRecord · Page · Diagram · Image · Document · PDF · Spreadsheet · Presentation · AudioVideo · SourceCode · ExternalReference. Industry extension types specialize one of them.
+Vision · Glossary · Stakeholder · Domain · Capability · Process · BusinessInformation · Feature · Rule (Business Rule) · QualityRequirement · TechnicalStandard · ADR (Decision) · UserStory · KnowledgeGap · WorkRecord · Evidence · MeetingRecord · Page · Diagram · Image · Document · PDF · Spreadsheet · Presentation · AudioVideo · SourceCode · ExternalReference. Industry extension types specialize one of them.
 
 ## What the projection must keep
 

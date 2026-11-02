@@ -59,7 +59,7 @@ For each class (textual knowledge, editable visuals, binary assets, work items, 
 
 ### 4. Define the linking keys
 
-Agree on the tag convention and start the **key registry** ([template](references/templates/key-registry.md)). Prefer the provider's native link when it exists, and always add the tag. See [references/linking.md](references/linking.md).
+Agree on the tag convention and start the **key registry** ([template](references/templates/key-registry.md)). Prefer the provider's native link when it exists, and always add the tag. When the project already numbers its items (R-10, ADR-011, Q-10), keep those IDs as the stable part of the key instead of inventing names. See [references/linking.md](references/linking.md).
 
 ### 5. Capture and curate knowledge
 
@@ -69,7 +69,7 @@ Treat transcripts and client documents as **evidence**: keep them with low autho
 
 ### 6. Organize the knowledge in the common structure
 
-Create the sections and fill each section's mandatory minimum, using the knowledge types and templates. Offer the recommended diagrams and methods of each section. See [references/structure.md](references/structure.md), [references/knowledge-types.md](references/knowledge-types.md) and [references/templates/](references/templates/).
+Create the sections and fill each section's mandatory minimum, using the knowledge types and templates. Offer the recommended diagrams and methods of each section. In a space that already governs its content, map the existing pages to sections instead of rewriting them, and ask each owner to confirm their items in bulk rather than leaving everything `draft` (see [references/knowledge-types.md](references/knowledge-types.md)). See [references/structure.md](references/structure.md), [references/knowledge-types.md](references/knowledge-types.md) and [references/templates/](references/templates/).
 
 | # | Section | In plain words |
 | --- | --- | --- |
@@ -91,14 +91,14 @@ When the business has knowledge the core types do not cover, declare an extensio
 
 ### 8. Record knowledge gaps
 
-Every unanswered question, assumption, conflict or missing dependency becomes a **Knowledge Gap** in the work management system, with an owner and an impact. Use the provider's dedicated type if it has one; otherwise the closest type plus the tag `knowledge-gap`. See [references/templates/knowledge-gap.md](references/templates/knowledge-gap.md).
+Every unanswered question, assumption, conflict or missing dependency becomes a **Knowledge Gap** in the work management system, with an owner and an impact. Use the provider's dedicated type if it has one; otherwise the closest type plus the tag `knowledge-gap`. If the project already keeps a gap register elsewhere, migrate or federate it, never copy it; the user decides ([references/structure.md](references/structure.md), section 7). See [references/templates/knowledge-gap.md](references/templates/knowledge-gap.md).
 
 ### 9. Choose the access tier
 
 - **Tier 1:** a deterministic index of items (key, type, section, source/ID/URL/version, state) plus direct reads from the sources.
 - **Tier 2:** a semantic projection (for example, Qdrant) behind an MCP server, with semantic search and exact lookup by key or ID.
 
-Choose Tier 2 when there are several sources, multimodal content, heterogeneous permissions, or a corpus too large for direct reading. See [references/projection.md](references/projection.md). Adapters map every source into the common contract: [references/contract.md](references/contract.md). With Tier 1, the procedure ends here.
+Start with Tier 1. Choose Tier 2 when consumers can no longer work by reading the sources directly: a corpus too large for direct reading, multimodal content that direct reads cannot reach, heterogeneous permissions, or many consumers that need central audit. Several sources alone are a signal, not a trigger. Record the choice and the signal that will make you revisit it. See [references/projection.md](references/projection.md). Adapters map every source into the common contract: [references/contract.md](references/contract.md). With Tier 1, the procedure ends here.
 
 ### 10. Choose the technologies (Tier 2)
 
@@ -122,3 +122,12 @@ Never pin versions from memory: resolve and verify them when building. Ask befor
 - Cite the framework page (ID and version) when a recommendation comes from the framework.
 - Separate clearly what is **known** (cited), what is **recommended**, and what is a **gap**.
 - Never present a draft as validated knowledge.
+
+### Read-only runs (audit or dry run)
+
+When you may not write, still walk the steps and return one report:
+
+1. **Per step:** what you found (with source, ID and version), what you recommend, and the changes you would make, marked *not applied*.
+2. **Gaps:** one table with a provisional ID, kind, impact, the sources that disagree (with versions) and the proposed owner. Mark the ones that come from a reader limitation instead of the content.
+3. **Friction with this skill:** guidance that was missing, ambiguous or contradictory, so the framework can improve.
+4. **Coverage:** what you read (counts per source) and what you could not read.
