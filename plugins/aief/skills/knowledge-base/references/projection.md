@@ -1,6 +1,6 @@
 # Index and semantic projection
 
-Sources: ADR-007 (5898241, v1) and ADR-009 (12943361, v1, proposed: it amends the Tier 2 criteria of ADR-007), Semantic Knowledge Platform - Cloud + MCP (688162, v7), Normalized Knowledge Artifact Contract (2686977, v5), Building the Knowledge Base (6094849, v6).
+Sources: ADR-007 (5898241, v2) and ADR-009 (12943361, v2), which amends the Tier 2 criteria of ADR-007, Semantic Knowledge Platform - Cloud + MCP (688162, v7), Normalized Knowledge Artifact Contract (2686977, v5), Building the Knowledge Base (6094849, v6).
 
 ## Pipeline shape
 

@@ -16,7 +16,7 @@ Framework terms (work product, knowledge artifact, semantic projection, state an
 | 8 | Adapters normalize each provider into a common contract; missing provider capabilities are documented as reduced fidelity, never fabricated. | Normalized Knowledge Artifact Contract (2686977, v5); ADR-003 (1048580, v1) |
 | 9 | Knowledge gaps are first-class: agents report gaps instead of inventing missing truth. | Knowledge Architecture (425986, v8) |
 | 10 | Work records (analysis, plans) live in the canonical source, anchored to a work item, and follow a KCS lifecycle; AI drafts, humans validate. | ADR-006 (5865473, v1) |
-| 11 | Access is tiered: a deterministic index first; a semantic projection behind an MCP when complexity warrants it. | ADR-007 (5898241, v1); ADR-009 (12943361, v1, proposed) for the Tier 2 criteria |
+| 11 | Access is tiered: a deterministic index first; a semantic projection behind an MCP when complexity warrants it. | ADR-007 (5898241, v2); ADR-009 (12943361, v2) for the Tier 2 criteria |
 | 12 | Authority stays distributed, access is centralized; link sources with native links when they exist and tags always, under a key convention; transcripts are evidence. | Building the Knowledge Base - Capture Methods, Linking and Suggested Tools (6094849, v6) |
 | 13 | Use AI for reasoning; use deterministic software for enforcement. | Core Concepts (655361, v4); Engineering Practices (229378, v3) |
 | 14 | Knowledge is structured by a small set of types sharing a common record; a Feature has two faces (knowledge page and delivery work item) joined by its key; gaps adapt to the work management system. | Building the Knowledge Base (6094849, v6), section "Knowledge Types" |
