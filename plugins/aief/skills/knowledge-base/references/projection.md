@@ -18,12 +18,14 @@ Consumers: AI agents · deterministic tools · people
 
 ## Choosing the tier
 
-Start with Tier 1. Move to Tier 2 when any of these holds:
+Start with Tier 1. The question is whether consumers can still answer their usual questions by reading the sources directly through the index. Move to Tier 2 when they cannot, because:
 
-- more than one source, or multimodal content;
-- the relevant corpus exceeds what a consumer can read directly;
+- the corpus a consumer must read for a typical task exceeds what it can read directly (context, time or cost);
+- multimodal content (recordings, scanned documents, images without text) holds knowledge that direct reads cannot reach;
 - permissions differ within the corpus;
 - many consumers need centralized audit and token budgeting.
+
+Several sources or some multimodal content are **signals, not triggers**: most projects have them from day one, and Tier 1 handles them while the volume is small. Record the tier as a decision, with the signal that will make you revisit it (for example, "more than 300 pages" or "the first batch of recorded sessions").
 
 Tier 2 is additive: it reuses the same adapters and normalized artifacts.
 

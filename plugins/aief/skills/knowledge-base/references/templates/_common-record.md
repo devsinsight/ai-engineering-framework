@@ -1,5 +1,5 @@
 <!-- Common record: include it at the top of every item (as page properties, front matter or work item fields). -->
-<!-- In a wiki such as Confluence, put this table inside a Page Properties macro: the ingestion pipeline reads key, type and state from it (Knowledge Ingestion Pipelines - Guide, 6750209, v2, section 5). -->
+<!-- In a wiki such as Confluence, put this table inside a Page Properties macro: the ingestion pipeline reads key, type and state from it (Knowledge Ingestion Pipelines - Guide, 6750209, v3, section 5). -->
 | Field | Value |
 | --- | --- |
 | key | `<type>-<stable-key>` |

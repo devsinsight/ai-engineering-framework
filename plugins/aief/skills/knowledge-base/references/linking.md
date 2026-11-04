@@ -18,6 +18,33 @@ The hardest part of a dispersed knowledge base is **linking**, not indexing. A f
 | Provider-independent: never a provider's numeric ID | `feature-checkout-payment`, not `ado-1234` |
 | One key per artifact, reused in every source | The work item, its pages and its diagram all carry the same tag |
 
+## Key prefixes
+
+One prefix per knowledge type, so a key says what it points to:
+
+| Prefix | Type | Prefix | Type |
+| --- | --- | --- | --- |
+| `vision-` | Vision | `decision-` | Decision (ADR) |
+| `term-` | Glossary term | `diagram-` | Diagram (only when it is not a view of a keyed item) |
+| `domain-`, `capability-` | Domain / Capability | `evidence-` | Evidence |
+| `process-` | Process | `meeting-` | Meeting Record |
+| `entity-` | Business information | `gap-` | Knowledge Gap |
+| `feature-` | Feature | `quality-` | Quality requirement |
+| `rule-` | Business Rule | `standard-` | Technical standard |
+| `stakeholder-` | Stakeholder | | |
+
+User stories carry the key of their feature; they do not need their own key. An industry extension type declares its own prefix ([templates/extension-type.md](templates/extension-type.md)).
+
+## Adopting the identifiers a project already uses
+
+Mature projects already number their items: business rules (R-10), decisions (ADR-011), gaps (Q-10), quality scenarios (QS-05), content IDs in data files. People and code cite those numbers, so **keep them** instead of inventing new names:
+
+1. **The existing ID becomes the stable part of the key:** `rule-r-10`, `decision-adr-011`, `gap-q-10`, `quality-qs-05`. Never renumber to fit the convention.
+2. **Register the original ID** in the key registry as a synonym of the key, so a search for "R-10" finds the key.
+3. **IDs are scoped by project.** Two spaces that both have an ADR-005 are different items; the key registry belongs to one project, and a consumer that reads several projects qualifies keys with the project.
+4. **Local numbering is not a key.** Numbers that are only meaningful inside one page (questions Q1, Q2 in a meeting record, rows in a table) are never registered. When such a question becomes a gap, it takes the next ID of the gap register, and the page links to it.
+5. When two existing schemes collide (the same ID used for different things), record a conflict gap and let the owner choose; do not rename silently.
+
 ## Key registry
 
 Tags are free text: a typo or a rename silently breaks the link. Keep a **key registry**, a single list of valid keys:
