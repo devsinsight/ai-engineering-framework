@@ -1,6 +1,6 @@
 # Index and semantic projection
 
-Sources: ADR-007 (5898241, v1), Semantic Knowledge Platform - Cloud + MCP (688162, v7), Normalized Knowledge Artifact Contract (2686977, v4), Building the Knowledge Base (6094849, v5).
+Sources: ADR-007 (5898241, v1) and ADR-009 (12943361, v1, proposed: it amends the Tier 2 criteria of ADR-007), Semantic Knowledge Platform - Cloud + MCP (688162, v7), Normalized Knowledge Artifact Contract (2686977, v5), Building the Knowledge Base (6094849, v6).
 
 ## Pipeline shape
 
@@ -53,7 +53,7 @@ Every technology choice is an **option** with a **reference default**. The full 
 
 | Need | Examples | Notes |
 | --- | --- | --- |
-| Unified search over many sources | Onyx (open source); Glean, Atlassian Rovo, Microsoft Copilot connectors (commercial) | Onyx: 40+ connectors, hybrid search, permission sync in its Enterprise license; Azure DevOps connector not confirmed |
+| Unified search over many sources | Onyx (open source); Glean, Atlassian Rovo, Microsoft Copilot connectors (commercial) | Onyx: 40+ connectors, hybrid search, permission sync in its Enterprise license; Azure DevOps connector not confirmed. Rovo Search is also reachable through the Atlassian MCP server (`search`, Rovo credits per call): it returns pages, not versioned chunks, and cannot filter by key or section, so it complements Tier 1 and does not replace Tier 2 |
 | Pipelines into the projection | Airbyte | Confluence source and Qdrant destination with chunking and embeddings; Azure DevOps source not confirmed |
 | Semantic database | Qdrant (reference), or any engine with hybrid search and payload filters | Local (for example, docker compose) or cloud |
 | Missing connectors | Custom adapters | When a connector does not preserve provenance, versions and permissions |
